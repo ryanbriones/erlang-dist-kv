@@ -2,8 +2,7 @@
 
     erlc -o ebin src/*.erl
     erl -pa ebin
-    > edk_master:start_link().
-    > edk_dict_store:start_link().
+    > application:start(edk).
     > edk_master:put(foo, "bar").
     > edk_master:get(foo).
     
